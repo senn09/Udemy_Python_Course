@@ -1,102 +1,61 @@
-French,English
-partie,part
-histoire,history
-chercher,search
-seulement,only
-police,police
-pensais,thought
-aide,help
-demande,request
-genre,kind
-mois,month
-frère,brother
-laisser,let
-car,because
-mettre,to put
-aucun,no
-laisse,leash
-eux,them
-ville,city
-chaque,each
-parlé,speak
-arrivé,come
-devrait,should
-bébé,baby
-longtemps,long time
-heures,hours
-vont,will
-pendant,while
-revoir,meet again
-aucune,any
-place,square
-parle,speak
-compris,understood
-savais,knew
-étaient,were
-attention,Warning
-voici,here is
-pourrais,could
-affaire,case
-donner,give
-type,type
-leurs,their
-donné,given
-train,train
-corps,body
-endroit,place
-yeux,eyes
-façon,way
-écoute,listen
-dont,whose
-trouve,find
-premier,first
-perdu,lost
-main,hand
-première,first
-côté,side
-pouvoir,power
-vieux,old
-sois,be
-tiens,here
-matin,morning
-tellement,so much
-enfant,child
-point,point
-venu,came
-suite,after
-pardon,sorry
-venez,come
-devant,in front of
-vers,towards
-minutes,minutes
-demandé,request
-chambre,bedroom
-mis,placed
-belle,beautiful
-droit,law
-aimerais,would like to
-aujourd'hui,today
-mari,husband
-cause,cause
-enfin,finally
-espère,hope
-eau,water
-attendez,Wait
-parti,left
-nouvelle,new
-boulot,job
-arrêter,Stop
-dirait,would say
-terre,Earth
-compte,account
-donne,given
-loin,far
-fin,end
-croire,believe
-chérie,sweetheart
-gros,large
-plutôt,rather
-aura,will have
-filles,girls
-jouer,to play
-bureau,office
+questions = {
+    1: {
+        'question': "In the past, engineers were named 'Civil Engineers' because they worked on engineering projects that included:",
+        'options': {
+            'a': "Engineering just roads, bridges, buildings, canals, and dams",
+            'b': "**Engineering projects that were non-military in nature**",
+            'c': "All of the above",
+            'd': "a) and b) above"
+        },
+        'correct_answer': 'b'
+    },
+    2: {
+        'question': "The Royal Commission of the Quebec Bridge Disaster found the following to be the main cause of the disaster:",
+        'options': {
+            'a': "Errors in judgment of the consulting and design Engineer",
+            'b': "Poor Judgment of the president of the bridge company for appointing unqualified engineer on site",
+            'c': "Inappropriate finances, time, and negligence to complete the project properly",
+            'd': "Ego of the consulting engineer",
+            'e': "**All of the above**"
+        },
+        'correct_answer': 'e'
+    },
+    3: {
+        'question': "Which province in Canada has the most number of licensed professional engineers?",
+        'options': {
+            'a': "Quebec",
+            'b': "Alberta",
+            'c': "British Columbia",
+            'd': "**Ontario**",
+            'e': "Nova Scotia"
+        },
+        'correct_answer': 'd'
+    },
+    4: {
+        'question': "In all Canadian provinces and territories, the laws regarding the requirement to get licensed to practice engineering are considered a 'closed' profession. This means that:",
+        'options': {
+            'a': "It is voluntary to get licensed",
+            'b': "**It is mandatory to get licensed to practice engineering**",
+            'c': "Only lawful for Canadian-educated engineers to get a license",
+            'd': "New licenses are only issued after a licensed engineer retires",
+            'e': "There are a limited number of engineering licenses"
+        },
+        'correct_answer': 'b'
+    },
+    5: {
+        'question': "In all Canadian Provinces and Territories, the profession of engineering is a 'Self-Regulating' profession. This means that:",
+        'options': {
+            'a': "The frontier of the province/territory appoints the board members to the engineering regulatory body",
+            'b': "The legislature sets all the rules and regulations that professional engineers must abide by",
+            'c': "**Licensed professional engineers elect their governing body**"
+        },
+        'correct_answer': 'c'
+    }
+}
+
+# Example usage:
+for q_num, q_data in questions.items():
+    print(f"Question {q_num}: {q_data['question']}")
+    for option, text in q_data['options'].items():
+        print(f"{option}. {text}")
+    print(f"Correct Answer: {q_data['correct_answer']}\n")

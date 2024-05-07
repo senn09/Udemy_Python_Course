@@ -26,6 +26,14 @@ def flip_card():
     flash_card_canvas.itemconfig(card_title, text="English", fill="White")
     flash_card_canvas.itemconfig(card_text, text=current_card["English"], fill="White")
 
+def generate_mcq():
+    # Generate MCQ options from other definitions in the set
+    options = [current_card["English"]]
+    other_definitions = [card["English"] for card in to_learn if card != current_card]
+    options.extend(random.sample(other_definitions, 3))
+    random.shuffle(options)
+    return options
+
 # ------------------- Grab CSV Data -----------------
 try:
     data = pandas.read_csv('data/words_to_learn.csv')
@@ -41,7 +49,6 @@ window.title("French to English Flash Cards")
 window.config(padx=50, pady=50, bg=BACKGROUND_COLOR)
 
 # Flash card
-
 card_front_image = PhotoImage(file="images/card_front.png")
 card_back_image = PhotoImage(file="images/card_back.png")
 flash_card_canvas = Canvas(width=800, height=526, bg=BACKGROUND_COLOR, highlightthickness=0)
@@ -49,6 +56,9 @@ card_side = flash_card_canvas.create_image(400, 263, image=card_front_image)
 card_title = flash_card_canvas.create_text(400, 150, text="title", font=("Arial", 40, "italic"))
 card_text = flash_card_canvas.create_text(400, 263, text="word", font=("Arial", 60, "bold"))
 flash_card_canvas.grid(row=0, column=0, columnspan=2)
+
+# MCQ Options
+mcq_options = generate_mcq()
 
 # Buttons
 wrong_image = PhotoImage(file="images/wrong.png")
@@ -61,7 +71,4 @@ right_button.grid(row=1, column=1)
 flip_timer = window.after(3000, flip_card)
 next_card()
 
-
-
 window.mainloop()
-

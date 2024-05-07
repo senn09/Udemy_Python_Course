@@ -1,21 +1,14 @@
 import requests
 
-paramters = {
+
+
+parameters = {
     "amount": 10,
-    "type": "boolean",
+    "type": "boolean"
 }
-response = requests.get("https://opentdb.com/api.php", params=paramters)
+response = requests.get('https://opentdb.com/api.php?amount=10&type=boolean', params=parameters)
 response.raise_for_status()
-
-question_data = [question for question in response.json()["results"]]
-
-
-
-
-
-
-
-
+question_data = response.json()["results"]
 
 
 # question_data = [
