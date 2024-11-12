@@ -19,4 +19,8 @@ This is a list of the basic python concepts which
 * 
 
 ### GUIs
-#### 
+#### Turtle Graphics
+*
+
+### Tools
+* [replit](https://replit.com/) - An online IDE that's very ready to use out of the box to quickly run and test code.   
