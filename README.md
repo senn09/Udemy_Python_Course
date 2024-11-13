@@ -7,6 +7,7 @@ Notes and Project Information will be found on this [notion page](https://subdue
 ### Fundamentals 
 This is a list of the basic python concepts which 
 
+#### Introductory Material
 * Variables/Data Types
 * Control Flow & Logical Operators
 * Dictionaries & Lists
@@ -16,11 +17,30 @@ This is a list of the basic python concepts which
 * Object Oriented Programming (OOP)
   * Constructing Objects/Classes
   * Attributes
+* Inheritance
+* List/Dictionary Comprehension (very useful/practical)
+* kwargs
+* Exception Handling
+
+#### Application/Web
+* Files, Directories, Path
+* CVS Data w/ Pandas
 * 
+
 
 ### GUIs
 #### Turtle Graphics
-*
+* Event Listeners
+* Projects:
+  * Snake Game
+  * Pong
+  * Bootleg Crossy Roads
+#### Tkinter
+* Projects:
+  * Pomodoro GUI
+  * Flash Card App
+
+
 
 ### Tools
 * [replit](https://replit.com/) - An online IDE that's very ready to use out of the box to quickly run and test code.   
