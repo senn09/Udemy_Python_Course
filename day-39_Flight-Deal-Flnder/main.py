@@ -1,4 +1,5 @@
 import requests
+import datetime
 
 AMADUES_API_KEY = ""
 AMADUES_API_SECRET = ""
@@ -41,20 +42,30 @@ def get_flight_deals(
         "Authorization": f"Bearer {token}"
     }
 
+    tomorrow = (datetime.date.today() + datetime.timedelta(days=1)).strftime('%Y-%m-%d')
+    date6months = (datetime.date.today() + datetime.timedelta(days=180)).strftime('%Y-%m-%d')
+    print(tomorrow)
+    print(date6months)
+
+
     params = {
         "originLocationCode": originLocationCode,
         "destinationLocationCode": destinationLocationCode,
-        "departureDate": departureDate,
-        "returnDate": returnDate,
+        "departureDate": tomorrow,
+        "returnDate": date6months,
         "adults": adults
     }
 
     response = requests.get(flight_offer_enpoint, headers=headers, params=params)
     result = response.json()
-    print(result)
+    lowestprice = 900
+    cheapflights = [flight for flight in result["data"] if float(flight["price"]["total"]) <= lowestprice]
+    print(cheapflights)
 
+#     todo
+#     connect to google sheets
+#     send sms
 
-# "PLQNe5wc3e8zv3cDwmf7IThf74Rs"
 token = request_token()
 print(token)
 
