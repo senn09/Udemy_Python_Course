@@ -75,8 +75,8 @@ for i in range(3):
     message = client.messages \
         .create(
         body=body,
-        from_='+13436449066',
-        to='+16475723596'
+        from_='+',
+        to='+'
     )
     print(message.status)
 
