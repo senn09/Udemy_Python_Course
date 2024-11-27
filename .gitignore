@@ -1,3 +1,5 @@
-.env
-.idea/
-.pyc
+*.env
+*.idea/
+*.cpython-312.pyc
+*.iml
+*.xml

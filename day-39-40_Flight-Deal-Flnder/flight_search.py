@@ -57,7 +57,7 @@ class FlightSearch:
             return "Not Found"
         return code
 
-    def check_flights(self, origin_city_code, destination_city_code, from_time, to_time):
+    def check_flights(self, origin_city_code, destination_city_code, from_time, to_time, is_direct=True):
 
         # print(f"Using this token to check_flights() {self._token}")
         headers = {"Authorization": f"Bearer {self._token}"}
@@ -67,8 +67,8 @@ class FlightSearch:
             "departureDate": from_time.strftime("%Y-%m-%d"),
             "returnDate": to_time.strftime("%Y-%m-%d"),
             "adults": 1,
-            "nonStop": "true",
-            "currencyCode": "GBP",
+            "nonStop": (str(is_direct)).lower(),
+            "currencyCode": "CAD",
             "max": "10",
         }
 
