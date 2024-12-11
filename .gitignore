@@ -3,3 +3,4 @@
 *.cpython-312.pyc
 *.iml
 *.xml
+*.cache
