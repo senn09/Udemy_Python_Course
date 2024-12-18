@@ -42,7 +42,7 @@ event_names = driver.find_elements(By.CSS_SELECTOR, value='.event-widget li a')
 
 python_events = {}
 for n in range(len(event_names)):
-    python_events[ngi] = {
+    python_events[n] = {
         "time": event_times[n].get_attribute("datetime").split("T")[0],
         "name": event_names[n].text
     }
