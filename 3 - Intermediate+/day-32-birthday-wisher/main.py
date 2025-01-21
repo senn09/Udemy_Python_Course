@@ -24,13 +24,13 @@ elif dt.datetime.now().weekday() == 6:
     weekday = "Sunday"
 
 
-my_email = "steveudemy09@gmail.com"
-password = "jrwhslmfypsqqfnw"
+my_email = ""
+password = ""
 
 with smtplib.SMTP("smtp.gmail.com") as connection:
     connection.starttls()
     connection.login(user=my_email,password=password)
-    connection.sendmail(from_addr=my_email,to_addrs="steveudemy09@yahoo.com",
+    connection.sendmail(from_addr=my_email,to_addrs="",
                         msg=f"Subject:{weekday} quote of the day\n\n{quote_of_the_day}")
 
 
