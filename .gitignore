@@ -4,4 +4,5 @@
 *.iml
 *.xml
 *.cache
-**/instance/
+*.DS_Store
+*.db
